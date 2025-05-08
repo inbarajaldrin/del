@@ -1,13 +1,13 @@
 from stable_baselines3 import PPO
 from stable_baselines3.common.vec_env import DummyVecEnv
-from bittle_env_lite import OpenCatGymEnv
+from bittle_env_lite_yaw import OpenCatGymEnv
 
 def deploy_model():
     # Wrap the environment in DummyVecEnv for inference
     env = DummyVecEnv([lambda: OpenCatGymEnv()])
 
     # Load the trained model (ensure this path is correct)
-    model = PPO.load("./trained_models/opencat_gym_model", device="cpu")
+    model = PPO.load("./trained_models/yaw_right", device="cpu")
 
     # Reset the environment and get initial observation
     obs = env.reset()
