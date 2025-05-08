@@ -10,11 +10,11 @@ MAXIMUM_LENGTH = 1.5e6        # Number of total steps for entire training
 
 # Factors to weight rewards and penalties.
 PENALTY_STEPS = 2e6         # Increase of penalty by step_counter/PENALTY_STEPS
-FAC_MOVEMENT = 5000         # Reward movement in x-direction
+FAC_MOVEMENT = 7500         # Reward movement in x-direction
 FAC_STABILITY = 0.2         # Punish body roll and pitch velocities
-FAC_Z_VELOCITY = 0.2        # Punish z movement of body
+FAC_Z_VELOCITY = 0.3        # Punish z movement of body
 FAC_SLIP = 0.0              # Punish slipping of paws
-FAC_ARM_CONTACT = 0.01      # Punish crawling on arms and elbows
+FAC_ARM_CONTACT = 0.1      # Punish crawling on arms and elbows
 FAC_SMOOTH_1 = 1.0          # Punish jitter and vibrational movement, 1st order
 FAC_SMOOTH_2 = 1.0          # Punish jitter and vibrational movement, 2nd order
 FAC_CLEARANCE = 0.0         # Factor to enfore foot clearance to PAW_Z_TARGET
